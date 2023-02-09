@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #282a36;
+    color: #f8f8f2;
+    font-family: "Poppins", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+header h1{
+    font-size: 60px;
+    
+}
+
+nav{
+    margin-bottom: 40px;
+
+}
+
+nav a {
+    color: #ff79c6;
+    text-decoration: none;
+    cursor: pointer;
+
+    margin: 50px;
+    font-size: 18px;
+}
+
+nav a:hover{
+    color: #ffaada;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main input {
+    width: 300px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+main button {
+    width: 150px;
+
+    background-color: #6272a4;
+    color: #f8f8f2;
+    font-size: 20px;
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+main input,
+button {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+main button:hover {
+    background-color: #4d597e;
+    transition: 0.5s;
+}
+
+main .resultado {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: baseline;
+    margin-top: 80px;
+    padding: 8px;
+
+    border: 1px solid white;
+    border-radius: 5px;
+
+    font-size: 24px;
+}
+
+main .resultado h3 {
+    margin-right: 30px;
+}
+
+footer {
+    margin-top: 120px;
+}
+
+/* Mensagem de erro - snackbar*/
+#snackbar {
+    visibility: hidden;
+    min-width: 300px;
+    margin: auto;
+    background-color: #ff5555;
+    color: #f8f8f2;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: absolute;
+    z-index: 1;
+    bottom: 30px;
+    font-size: 18px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
